@@ -22,9 +22,7 @@ namespace AllCardsOnDeckCS
                 }
             }
 
-
             var numberOfCards = (deck.Count);
-
 
             for (var rightIndex = numberOfCards - 1; rightIndex >= 0; rightIndex--)
             {
@@ -33,13 +31,14 @@ namespace AllCardsOnDeckCS
                 deck[rightIndex] = deck[leftIndex];
                 deck[leftIndex] = rightCard;
 
-
-                foreach (var ShuffledDeck in deck)
-                {
-                    Console.WriteLine($"{ShuffledDeck}");
-                }
-
             }
+
+            var playerHandOne = $"{deck[0]} {deck[1]}";
+            var playerHandTwo = $"{deck[2]} {deck[3]}";
+
+            Console.WriteLine($"Player one has {playerHandOne}");
+            Console.WriteLine($"Player two has {playerHandTwo}");
+
 
         }
     }
